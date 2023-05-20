@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  width: 100%;
+  background-image: url("/public/bg-clouds.jpg");
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: left top;
+  background-size: 100% 100%;
+}
+
+.scrollbar::-webkit-scrollbar {
+  @apply h-2
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  @apply backdrop-blur-sm bg-white/10 rounded-full
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-zinc-300
+}
+
+@media screen and (max-width: 576px) {
+  #root {
+    background-size: cover;
+  }
+}
